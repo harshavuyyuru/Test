@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="row" style="min-height:300px;">
+		<div class="col-sm-6">
+			<hr/>
+			<div class="col-xs-3">
+
+				<ul class="nav nav-tabs tabs-left">
+					<li *ngFor = "let hero of heroes">
+						<a routerLink="{{hero}}" data-toggle="tab">{{hero}}</a>
+					</li>
+					<!-- <li>
+						<a routerLink="details" data-toggle="tab">Details</a>
+					</li> -->
+				</ul>
+			</div>
+
+		</div>
+	</div>
+<router-outlet></router-outlet>
+	 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

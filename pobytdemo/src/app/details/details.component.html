@@ -1,0 +1,74 @@
+<!-- <div class="container">
+	
+		<form role="form" id="contact-form" class="contact-form">
+                    <div class="row">
+                		<div class="col-md-6">
+                  		<div class="form-group">
+                            <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name">
+                  		</div>
+                  	</div>
+                    	<div class="col-md-6">
+                  		<div class="form-group">
+                            <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
+                  		</div>
+                  	</div>
+                  	</div>
+                  	<div class="row">
+                  		<div class="col-md-12">
+                  		<div class="form-group">
+                            <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
+                  		</div>
+                  	</div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                  <button type="submit" class="btn main-btn pull-right">Send a message</button>
+                  </div>
+                  </div>
+                </form>
+</div> -->
+
+    
+        <div class="container">
+                                 <!-- <h4>Cities</h4>
+                        <div class="radio">
+                                <input type="radio" name="radio1" id="radio1" value="option1" checked="">
+                                <label for="radio1">
+                                    Banglore
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="radio1" id="radio2" value="option2">
+                                <label for="radio2">
+                                    Hyderabad
+                                </label>
+                            </div>  -->
+            <div class="col-md-5 col-md-offset-3">
+              <form #frm="ngForm" (ngSubmit)="formClick(frm.value)">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Harsha" [(ngModel)]="uname" required minlength="5" maxlength="8" #name="ngModel">
+                  <small [hidden]="name.valid || (name.pristine && !f.submitted)" class="text-danger">
+                    Username is required (minimum 5 characters).
+                  </small>
+                </div>
+                <div class="form-group">
+                  <label for="mail">Email</label>
+                  <input type="email" class="form-control" name="mail" id="mail"  [(ngModel)]="mailid" required  #mail="ngModel" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+                  <small [hidden]="mail.valid || (mail.pristine && !f.submitted)" class="text-danger">
+                    Email is required and format should be <i>john@doe.com</i>.
+                  </small>
+                </div>
+                <div class="form-group ">
+                  <label for="text">Your Message</label>
+                 <textarea  class="form-control"  name="des" id="text" placeholder="Description" [(ngModel)]="desc"></textarea> 
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>           
+            </div>
+          
+        </div>
+
+
+    
+ 
